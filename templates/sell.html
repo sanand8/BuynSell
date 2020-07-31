@@ -132,20 +132,25 @@
   </head>
   <body>
     <div class="main-block">
-      <h1>Login</h1>
-      <form action="login" method="POST">
+      <h1>Product</h1>
+      <form action="sell" method="POST">
         
         {% csrf_token %}
         
-        <label id="icon" for="name"><i class="fas fa-envelope"></i></label>
-        <input type="text" name="Email" id="name" placeholder="Email" required/>
+        <label id="icon" for="name"><i class="fas fa-image"></i></label>
+        <input type="file" name="Img" id="name" placeholder="Email" required/>
         
-        <label id="icon" for="name"><i class="fas fa-unlock-alt"></i></label>
-        <input type="password" name="Password" id="name" placeholder="Password" required/>
+        <label id="icon" for="name"><i class="fas "></i></label>
+        <input type="text" name="Price" id="name" placeholder="Price" required/>
         
+        <label id="icon" for="name"><i class="fas fa-phone"></i></label>
+        <input type="text" name="Contact" id="name" placeholder="Contact Number" required/>
+
+        <label id="icon" for="name"><i class="fas fa-story"></i></label>
+        <input type="text" name="Description" id="name" placeholder="Description" required/>
         <div class="btn-block">
           
-          <button type="submit" >Submit</button>
+          <button type="submit" >Upload</button>
         </div>
       </form>
     </div>
