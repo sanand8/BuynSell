@@ -1,0 +1,31 @@
+{% load static %}
+{% static "images" as baseUrl%}
+<!DOCTYPE html>
+<head>
+    <title> Buy and Sell Home</title>
+    <link rel="stylesheet" type="text/css" href="{%static 'css/home.css' %}">
+</head>
+
+<body class="bg" style="background-image:url({%static 'images/home.jpg' %})">
+    <header class="had">
+        <div class="div1">
+            <h2 >Home</h2>
+        </div>
+        {% if p == 1 %}
+            <ul>Hello, {{name}}</ul>
+            <ul><a href="logout">Logout</a></ul>
+        {% else %}
+        
+            <ul><a href="login/login">Login</a></ul> 
+            <ul><a href="register/register">Signup</a></ul>
+        
+        {% endif %}
+    </header>
+    <div class="center">
+        <a href="register/register" ><img src="{%static 'images/buy.jpg' %}" alt="" width="250" height="270">
+        </a>
+        
+        <a href="register/register" ><img src="{%static 'images/sell.jpg' %}" alt="" width="250" height="270">
+        </a>
+    </div>
+</body>
