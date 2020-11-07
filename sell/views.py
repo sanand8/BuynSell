@@ -7,7 +7,8 @@ def sell(request):
         price = request.POST.get('Price')
         contact = request.POST.get('Contact')
         des = request.POST.get('Description')
-        Sell(img=img, price=price, contact=contact, description=des).save()
-        return redirect('/')
+        username = request.session.get('username','')
+        Sell(img=img, price=price, contact=contact, description=des, username=username).save()
+        return render(request,'home.html',{'name':username})
     else:
         return render(request,'sell.html')

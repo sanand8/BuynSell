@@ -25,12 +25,13 @@ SECRET_KEY = '%m3b=dj-1^)ad$zt3ww+z9whg4%myujpv8e#25*873kndw$wue'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'buy',
     'register',
     'login',
     'sell',
@@ -128,3 +129,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 STATIC_ROOT = os.path.join(BASE_DIR,'assets')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
